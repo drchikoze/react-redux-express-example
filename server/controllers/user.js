@@ -5,15 +5,13 @@ var mongoose = require('mongoose'),
 
 exports.login = function(req, res, next) {
  	passport.authenticate('local', function(err, user, info) {
-    console.log('err - ' + err);
-    console.log('user - ' + user);
-    console.log(info);
-    console.log('-----------');
+    // console.log('err - ' + err);
+    // console.log('user - ' + user);
+    // console.log(info);
+    // console.log('-----------');
  		if (err || !user) {
  			res.status(400).json(info);
-      // return res.json(info)
  		} else {
- 			// Remove sensitive data before login
  			user.password = undefined;
  			user.salt = undefined;
 

@@ -1,21 +1,11 @@
 import { combineReducers } from 'redux'
 import auth from './authReducer.js'
-// import visual from './visualReducer.js'
+import todos from './todoReducer.js'
 
 const rootReducer = combineReducers({
-  auth
-  // visual
+  auth,
+  todos
 })
 
-// let rootReducer = function(state, action) {
-//   switch (action.type) {
-//     case 'TOGGLE_APP_BAR':
-//     return Object.assign({}, state, {
-//       open: !state.open
-//     })
-//     default:
-//       return state;
-//   }
-// }
 
 export default rootReducer

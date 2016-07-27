@@ -68,25 +68,6 @@ let authReducer = function(auth = initialState, action) {
         isLoginedIn: false,
         user: null
       })
-      // return {
-      //   ...auth,
-      //   message: null,
-      //   isWaiting: true,
-      // }
-  //   case 'AUTH_LOGIN_FAILED':
-  //     return {
-  //       // ...auth,
-  //       // message: null,
-  //       // authenticated: true,
-  //       // isWaiting: false,
-  //     }
-  //   case 'AUTH_LOGIN_SUCCESS':
-  //     return {
-  //       // ...auth,
-  //       // isWaiting: false,
-  //       // authenticated: false,
-  //       // message: action.message
-  //     }
     default:
       return auth
   }

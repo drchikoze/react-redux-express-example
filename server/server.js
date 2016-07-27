@@ -18,10 +18,6 @@ const compiler = webpack(config);
 app.use(webpackDevMiddleware(compiler, {noInfo: true, publicPath: config.output.publicPath}));
 app.use(webpackHotMiddleware(compiler));
 
-app.use(express.static('./dist'));
-app.use(express.static('./static'));
-// app.use(express.static(path.join(__dirname, './..', 'static')));
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true})); // for parsing application/x-www-form-urlencoded
 

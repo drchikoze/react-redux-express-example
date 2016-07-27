@@ -112,7 +112,7 @@ export function logOut() {
             let user = JSON.parse(resp.body);
             dispatch(receiveLogOut(user));
             sessionStorage.removeItem('token');
-
+            browserHistory.push('/');
           }
        }
     )

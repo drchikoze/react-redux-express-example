@@ -9,13 +9,11 @@ import Profile from './views/Profile/Profile.js';
 
 export const getRoutes = (store) => {
   function requireAuth(nextState, replaceState) {
-    // Now you can access the store object here.
     const state = store.getState();
-    console.log(state);
-    // if (!state.user.isAuthenticated) {
-    //   // Not authenticated, redirect to login.
-    //   replaceState({ nextPathname: nextState.location.pathname }, '/login');
-    // }      <IndexRoute component={WelcomePage} />
+    if (!state.auth.isLoginedIn) {
+      // Not authenticated, redirect to login.
+      replaceState({ nextPathname: nextState.location.pathname }, '/login');
+    }
   }
 
   return (

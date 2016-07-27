@@ -26,7 +26,7 @@ export default class MainView extends Component {
   render() {
     return (
       <div className='MainApp'>
-        <Navbar fixedTop={true}>
+        <Navbar fixedTop={false}>
           <Navbar.Header>
             <Navbar.Brand>
               <Link to="/"> Example.com </Link>

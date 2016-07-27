@@ -19,27 +19,16 @@ export default class LoginForm extends Component {
     event.preventDefault();
     // console.log(this.props);
 
+    // if (this.state.username.length < 1) {}
+    // if (this.state.username.length > 0 && this.state.password.length < 1) {}
+    // if (this.state.username.length > 0 && this.state.password.length > 0) {}
+
     const { dispatch } = this.props;
     let userObj = {
       email: this.state.email,
       password: this.state.password
     }
     dispatch(authActions.login(userObj))
-    // // if (this.state.username.length < 1) {
-    // //   this.refs.usernameInput.getInputDOMNode().focus();
-    // // }
-    // // if (this.state.username.length > 0 && this.state.password.length < 1) {
-    // //   this.refs.passwordInput.getInputDOMNode().focus();
-    // // }
-    // if (this.state.username.length > 0 && this.state.password.length > 0) {
-    //   var userObj = {
-    //     email: this.state.username,
-    //     // username: this.state.username,
-    //     password: this.state.password
-    //   };
-    //   dispatch(authActions.signIn(userObj))
-    //   this.setState({ username: '', password: ''});
-    // }
   }
 
   handleChange(event) {

@@ -12,7 +12,8 @@ const initialState = {
     isLogining: false,
     errorMsg: null,
     user: null,
-  }
+  },
+  todos:[]
 }
 const store = configureStore(initialState);
 
